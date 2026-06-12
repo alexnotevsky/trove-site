@@ -4,307 +4,303 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#0A0F1E">
+<meta name="theme-color" content="#101D18">
 <title>Trove — Own crypto. Sleep easy.</title>
 <meta name="description" content="Buy, sell, and hold crypto with bank-grade security built in from the first tap. No jargon, no panic. A calm, beautiful place to own what's yours.">
 <meta property="og:title" content="Trove — Own crypto. Sleep easy.">
 <meta property="og:description" content="Security-first crypto for everyone. Bank-grade safety, zero jargon, real humans.">
 <meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M16 8H32L44 19L24 44L4 19Z' fill='none' stroke='%23C9A86C' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M16 8H32L44 19L24 44L4 19Z' fill='none' stroke='%23D8B36A' stroke-width='3'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet"></noscript>
 <style>
 :root{
-  --midnight:#0A0F1E; --ink:#070B16; --surface:#121A2E; --surface-2:#0E1626;
-  --line:rgba(201,168,108,.16); --line-cool:rgba(255,255,255,.08);
-  --gold:#C9A86C; --gold-soft:#DCC18C; --gold-deep:#2A1F07;
-  --platinum:#ECEEF4; --white:#F4F1E9; --mist:#9AA4B8; --guard:#5FC79A;
-  --maxw:1180px; --r:14px;
-  --serif:'Fraunces',Georgia,'Times New Roman',serif;
-  --sans:'Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --velvet:#101D18; --velvet-deep:#0B1511; --case:#16261F; --case-2:#1B2D25;
+  --candle:#D8B36A; --candle-soft:#E6CC95; --candle-deep:#3A2D12;
+  --ivory:#F2EBDD; --fog:#9AA89E; --guard:#69B489; --garnet:#C97B6B;
+  --line:rgba(216,179,106,.22); --line-dim:rgba(216,179,106,.12); --line-cool:rgba(242,235,221,.08);
+  --maxw:1160px;
+  --display:'Marcellus','Times New Roman',serif;
+  --body:'Jost','Avenir Next','Segoe UI',sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:88px;-webkit-text-size-adjust:100%}
-body{background:var(--midnight);color:var(--platinum);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth;scroll-padding-top:92px;-webkit-text-size-adjust:100%}
+body{background:var(--velvet);color:var(--ivory);font-family:var(--body);font-weight:300;font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(120% 90% at 50% -10%,rgba(216,179,106,.07),transparent 55%),radial-gradient(100% 100% at 50% 115%,rgba(0,0,0,.5),transparent 60%);pointer-events:none;z-index:0}
 img,svg{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
-input,select{font-family:inherit}
-::selection{background:rgba(201,168,108,.3);color:#fff}
+input,select,output{font-family:inherit}
+::selection{background:rgba(216,179,106,.35);color:#fff}
 .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:3px}
+.wrap{position:relative;max-width:var(--maxw);margin:0 auto;padding:0 26px;z-index:1}
+:focus-visible{outline:2px solid var(--candle);outline-offset:3px;border-radius:2px}
 
-.skip{position:absolute;left:-999px;top:8px;background:var(--gold);color:var(--gold-deep);padding:10px 16px;border-radius:8px;z-index:200;font-weight:600}
+.skip{position:absolute;left:-999px;top:8px;background:var(--candle);color:var(--candle-deep);padding:10px 16px;z-index:200;font-weight:500;letter-spacing:.06em}
 .skip:focus{left:12px}
 
+/* type voices */
+.caps{font-family:var(--body);font-weight:400;font-size:11.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--candle)}
+.caps .dia{display:inline-block;margin:0 10px;transform:translateY(-1px);font-size:8px;color:var(--candle)}
+
 /* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:14.5px;font-weight:600;padding:13px 22px;border-radius:11px;transition:transform .18s ease,background .2s ease,border-color .2s ease,color .2s ease;white-space:nowrap}
-.btn svg{width:16px;height:16px}
-.btn-gold{background:var(--gold);color:var(--gold-deep)}
-.btn-gold:hover{background:var(--gold-soft);transform:translateY(-1px)}
-.btn-ghost{border:1px solid var(--line-cool);color:var(--platinum)}
-.btn-ghost:hover{border-color:var(--gold);color:var(--gold-soft);transform:translateY(-1px)}
-.btn-lg{padding:15px 28px;font-size:15.5px}
-
-/* eyebrow */
-.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--gold-soft);font-size:12.5px;font-weight:500;letter-spacing:.12em;margin-bottom:18px}
-.eyebrow .gem{width:11px;height:11px;flex:none}
-.eyebrow .gem path{stroke:var(--gold)}
-
-/* gem mark */
-.gem path{fill:none;stroke-linejoin:round}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--body);font-weight:500;font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;padding:17px 34px;transition:background .25s ease,color .25s ease,border-color .25s ease,box-shadow .35s ease,transform .25s ease;white-space:nowrap}
+.btn-fill{background:var(--candle);color:var(--candle-deep)}
+.btn-fill:hover{background:var(--candle-soft);box-shadow:0 10px 40px -8px rgba(216,179,106,.45);transform:translateY(-1px)}
+.btn-line{border:1px solid var(--line);color:var(--ivory)}
+.btn-line:hover{border-color:var(--candle);color:var(--candle-soft);transform:translateY(-1px)}
 
 /* header */
-.site{position:fixed;inset:0 0 auto 0;z-index:100;border-bottom:1px solid transparent;transition:background .3s ease,border-color .3s ease}
-.site.scrolled{background:rgba(10,15,30,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom-color:var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-.brand{display:flex;align-items:center;gap:11px}
-.brand .gem{width:26px;height:26px}
-.brand .gem path{stroke:var(--gold)}
-.brand .wm{font-family:var(--serif);font-weight:500;font-size:23px;letter-spacing:.01em;color:var(--white)}
-.nav-links{display:flex;gap:32px}
-.nav-link{position:relative;color:var(--mist);font-size:14.5px;font-weight:500;padding:4px 0;transition:color .2s ease}
-.nav-link::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:1px;background:var(--gold);transition:width .25s ease}
-.nav-link:hover{color:var(--platinum)}
-.nav-link:hover::after{width:100%}
-.nav-cta{display:flex;align-items:center;gap:14px}
-.nav-login{color:var(--platinum);font-size:14.5px;font-weight:500;padding:8px 4px}
-.nav-login:hover{color:var(--gold-soft)}
-.menu-btn{display:none;width:42px;height:42px;border:1px solid var(--line-cool);border-radius:10px;align-items:center;justify-content:center}
-.menu-btn svg{width:20px;height:20px;stroke:var(--platinum)}
-.mobile-menu{display:none;flex-direction:column;gap:4px;padding:8px 24px 22px;border-bottom:1px solid var(--line);background:rgba(10,15,30,.97);backdrop-filter:blur(12px)}
-.mobile-menu a{padding:13px 4px;color:var(--platinum);font-size:16px;font-weight:500;border-bottom:1px solid var(--line-cool)}
-.mobile-menu .btn{margin-top:14px}
+.site{position:fixed;inset:0 0 auto 0;z-index:100;border-bottom:1px solid transparent;transition:background .35s ease,border-color .35s ease}
+.site.scrolled{background:rgba(11,21,17,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom-color:var(--line-dim)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:80px}
+.brand{display:flex;align-items:center;gap:13px}
+.brand .gem{width:24px;height:24px}
+.brand .gem path{fill:none;stroke:var(--candle);stroke-linejoin:round}
+.brand .wm{font-family:var(--display);font-size:21px;letter-spacing:.34em;text-transform:uppercase;color:var(--ivory);padding-left:.34em}
+.nav-links{display:flex;gap:36px}
+.nav-link{position:relative;color:var(--fog);font-size:12px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;padding:6px 0;transition:color .25s ease}
+.nav-link::after{content:"";position:absolute;left:50%;bottom:0;width:0;height:1px;background:var(--candle);transition:width .3s ease,left .3s ease}
+.nav-link:hover{color:var(--ivory)}
+.nav-link:hover::after{width:100%;left:0}
+.nav-cta{display:flex;align-items:center;gap:22px}
+.nav-login{color:var(--fog);font-size:12px;letter-spacing:.22em;text-transform:uppercase;transition:color .25s}
+.nav-login:hover{color:var(--candle-soft)}
+.nav-cta .btn{padding:13px 24px}
+.menu-btn{display:none;width:44px;height:44px;border:1px solid var(--line-dim);align-items:center;justify-content:center}
+.menu-btn svg{width:20px;height:20px;stroke:var(--ivory)}
+.mobile-menu{display:none;flex-direction:column;padding:6px 26px 26px;border-bottom:1px solid var(--line-dim);background:rgba(11,21,17,.97);backdrop-filter:blur(14px)}
+.mobile-menu a{padding:15px 2px;color:var(--ivory);font-size:13px;letter-spacing:.22em;text-transform:uppercase;border-bottom:1px solid var(--line-cool)}
+.mobile-menu .btn{margin-top:18px}
 
-/* hero */
-.hero{position:relative;padding:150px 0 70px;overflow:hidden}
-.hero-glow{position:absolute;top:-10%;left:50%;transform:translateX(-50%);width:1100px;height:680px;background:radial-gradient(ellipse at center,rgba(201,168,108,.10),transparent 62%);pointer-events:none;z-index:0}
-.hero-gem{position:absolute;right:-120px;top:60px;width:560px;opacity:.06;z-index:0;pointer-events:none}
-.hero-gem path{stroke:var(--gold);stroke-width:.6}
-.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
-.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.7rem,5.6vw,4.5rem);line-height:1.02;letter-spacing:-.015em;color:var(--white)}
-.hero h1 .soft{color:var(--gold-soft);font-style:italic;font-weight:400}
-.hero p.lead{margin:24px 0 32px;font-size:clamp(1.02rem,1.5vw,1.18rem);color:var(--mist);max-width:520px;line-height:1.65}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
-.hero-trust{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:34px}
-.hero-trust span{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--mist)}
-.hero-trust svg{width:15px;height:15px;flex:none}
+/* hero — the vitrine */
+.hero{position:relative;padding:170px 0 90px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:70px;align-items:center}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(2.6rem,5.4vw,4.3rem);line-height:1.08;letter-spacing:.045em;text-transform:uppercase;color:var(--ivory)}
+.hero h1 .gild{display:block;color:var(--candle);letter-spacing:.13em;font-size:.78em;margin-top:10px}
+.hero .lead{margin:28px 0 38px;font-size:clamp(1.02rem,1.4vw,1.15rem);font-weight:300;color:var(--fog);max-width:480px;line-height:1.75}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap}
+.hero-trust{margin-top:44px;font-size:10.5px;font-weight:400;letter-spacing:.26em;text-transform:uppercase;color:var(--fog)}
+.hero-trust .dia{margin:0 12px;font-size:7px;color:var(--candle)}
 
-/* widget */
-.widget{background:linear-gradient(180deg,rgba(255,255,255,.02),transparent),var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 30px 80px -40px rgba(0,0,0,.8)}
-.w-tabs{display:flex;gap:6px;background:var(--surface-2);border:1px solid var(--line-cool);border-radius:12px;padding:5px;margin-bottom:18px}
-.w-tab{flex:1;padding:9px;border-radius:8px;font-size:14px;font-weight:600;color:var(--mist);transition:background .2s,color .2s}
-.w-tab.is-active{background:var(--surface);color:var(--white);box-shadow:0 1px 0 rgba(201,168,108,.25) inset}
-.w-field{background:var(--surface-2);border:1px solid var(--line-cool);border-radius:14px;padding:14px 16px}
-.w-field:focus-within{border-color:rgba(201,168,108,.4)}
-.w-field-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
-.w-k{font-size:12px;color:var(--mist);letter-spacing:.03em}
-.w-bal{font-size:12px;color:var(--mist)}
-.w-field-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.w-input{flex:1;min-width:0;background:none;border:none;color:var(--white);font-size:27px;font-weight:500;letter-spacing:-.01em}
+/* load sequence */
+.js .hero-copy>*{opacity:0;animation:rise .9s cubic-bezier(.22,1,.36,1) forwards}
+.js .hero-copy>:nth-child(1){animation-delay:.1s}
+.js .hero-copy>:nth-child(2){animation-delay:.22s}
+.js .hero-copy>:nth-child(3){animation-delay:.36s}
+.js .hero-copy>:nth-child(4){animation-delay:.5s}
+.js .hero-copy>:nth-child(5){animation-delay:.64s}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+
+/* the stage: beam + motes + case */
+.stage{position:relative;padding-top:46px}
+.beam{position:absolute;left:50%;top:-190px;transform:translateX(-50%);width:430px;height:640px;background:linear-gradient(180deg,rgba(216,179,106,.34),rgba(216,179,106,.07) 62%,transparent 88%);clip-path:polygon(41% 0,59% 0,104% 100%,-4% 100%);filter:blur(22px);pointer-events:none;z-index:0}
+.js .beam{opacity:0;animation:bloom 1.6s ease .55s forwards}
+@keyframes bloom{from{opacity:0}to{opacity:1}}
+.pool{position:absolute;left:50%;bottom:-30px;transform:translateX(-50%);width:560px;height:130px;background:radial-gradient(50% 50% at 50% 50%,rgba(216,179,106,.16),transparent 70%);filter:blur(8px);pointer-events:none;z-index:0}
+.mote{position:absolute;width:3px;height:3px;border-radius:50%;background:var(--candle-soft);opacity:0;pointer-events:none;z-index:1;animation:drift 11s linear infinite}
+.mote:nth-child(odd){width:2px;height:2px}
+@keyframes drift{0%{transform:translateY(-30px) translateX(0);opacity:0}12%{opacity:.55}55%{opacity:.3}100%{transform:translateY(330px) translateX(26px);opacity:0}}
+
+.case{position:relative;z-index:2;background:linear-gradient(180deg,rgba(216,179,106,.07),rgba(216,179,106,.015) 30%),var(--case);border:1px solid var(--line);padding:30px 28px 26px;box-shadow:0 50px 110px -50px rgba(0,0,0,.9),0 -24px 70px -50px rgba(216,179,106,.35);overflow:hidden}
+.js .case{opacity:0;animation:rise 1s cubic-bezier(.22,1,.36,1) .75s forwards}
+.case::after{content:"";position:absolute;top:-60%;left:-80%;width:55%;height:220%;background:linear-gradient(100deg,transparent,rgba(242,235,221,.05) 45%,rgba(242,235,221,.1) 50%,rgba(242,235,221,.05) 55%,transparent);transform:rotate(8deg);animation:sweep 9s ease-in-out infinite;pointer-events:none}
+@keyframes sweep{0%,72%{left:-80%}88%,100%{left:160%}}
+.plaque{margin:22px auto 0;max-width:430px;text-align:center;font-size:10px;font-weight:400;letter-spacing:.3em;text-transform:uppercase;color:var(--fog);border:1px solid var(--line-dim);padding:11px 18px}
+.js .plaque{opacity:0;animation:rise .9s ease 1s forwards}
+
+/* widget internals */
+.w-tabs{display:flex;border-bottom:1px solid var(--line-dim);margin-bottom:24px}
+.w-tab{flex:1;padding:12px 0 14px;font-size:12px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--fog);border-bottom:1px solid transparent;margin-bottom:-1px;transition:color .25s,border-color .25s}
+.w-tab.is-active{color:var(--candle);border-bottom-color:var(--candle)}
+.w-field{padding:6px 2px 16px}
+.w-field+.w-field{border-top:1px solid var(--line-cool)}
+.w-field-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.w-k{font-size:10px;font-weight:400;letter-spacing:.3em;text-transform:uppercase;color:var(--fog)}
+.w-bal{font-size:11px;letter-spacing:.08em;color:var(--fog)}
+.w-field-row{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.w-input{flex:1;min-width:0;background:none;border:none;color:var(--ivory);font-family:var(--body);font-weight:300;font-size:31px;letter-spacing:.01em}
 .w-input:focus{outline:none}
 .w-output{font-variant-numeric:tabular-nums}
-.w-asset{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line-cool);border-radius:999px;padding:7px 13px 7px 9px;font-size:14px;font-weight:600;color:var(--platinum);white-space:nowrap}
-.w-coin{width:20px;height:20px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:var(--gold-deep);background:var(--gold)}
-.w-asset-select{padding-right:8px}
-.w-select{background:none;border:none;color:var(--platinum);font-size:14px;font-weight:600;cursor:pointer;-webkit-appearance:none;appearance:none;padding-right:16px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%239AA4B8' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right center}
-.w-select:focus{outline:none;color:var(--white)}
-.w-select option{background:var(--surface);color:var(--platinum)}
+.w-asset{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line-dim);padding:8px 14px 8px 10px;font-size:13px;font-weight:400;letter-spacing:.1em;color:var(--ivory);white-space:nowrap}
+.w-coin{width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:500;color:var(--candle-deep);background:var(--candle)}
+.w-select{background:none;border:none;color:var(--ivory);font-size:13px;font-weight:400;letter-spacing:.1em;cursor:pointer;-webkit-appearance:none;appearance:none;padding-right:18px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23D8B36A' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right center}
+.w-select:focus{outline:none}
+.w-select option{background:var(--case);color:var(--ivory)}
 .w-swap{display:flex;justify-content:center;height:0;position:relative;z-index:2}
-.w-swapbtn{width:34px;height:34px;margin-top:-9px;border:1px solid var(--line);border-radius:50%;background:var(--surface);display:flex;align-items:center;justify-content:center;transition:transform .3s ease,border-color .2s}
-.w-swapbtn:hover{border-color:var(--gold)}
-.w-swapbtn svg{width:16px;height:16px;stroke:var(--gold)}
+.w-swapbtn{width:36px;height:36px;margin-top:-18px;border:1px solid var(--line);border-radius:50%;background:var(--case-2);display:flex;align-items:center;justify-content:center;transition:transform .35s ease,border-color .25s}
+.w-swapbtn:hover{border-color:var(--candle)}
+.w-swapbtn svg{width:15px;height:15px;stroke:var(--candle)}
 .w-swapbtn.spin{transform:rotate(180deg)}
-.w-meta{text-align:center;font-size:12px;color:var(--mist);margin:13px 0}
-.w-cta{width:100%;margin-bottom:14px}
-.w-trust{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 16px;font-size:11.5px;color:var(--mist)}
-.w-trust span{display:inline-flex;align-items:center;gap:6px}
-.w-trust svg{width:13px;height:13px;flex:none}
+.w-meta{text-align:center;font-size:11px;letter-spacing:.12em;color:var(--fog);margin:16px 0}
+.w-cta{width:100%;margin-bottom:4px}
 
-/* rails */
-.rails{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 0}
-.rails-inner{display:flex;align-items:center;gap:28px;flex-wrap:wrap;justify-content:center}
-.rails-label{font-size:12.5px;color:var(--mist);letter-spacing:.04em}
-.rail-pill{font-size:13px;font-weight:500;color:var(--platinum);opacity:.8;border:1px solid var(--line-cool);border-radius:999px;padding:8px 16px;transition:opacity .2s,border-color .2s}
-.rail-pill:hover{opacity:1;border-color:var(--line)}
+/* section scaffold */
+.section{position:relative;padding:clamp(76px,10vw,128px) 0}
+.sec-head{text-align:center;max-width:640px;margin:0 auto clamp(48px,6vw,72px)}
+.sec-head .caps{display:block;margin-bottom:20px}
+h2.title{font-family:var(--display);font-weight:400;font-size:clamp(1.8rem,3.4vw,2.7rem);line-height:1.18;letter-spacing:.06em;text-transform:uppercase;color:var(--ivory)}
+.sec-head .intro{margin-top:20px;color:var(--fog);font-size:1.04rem;line-height:1.75}
+.divider{display:flex;align-items:center;justify-content:center;gap:16px;max-width:var(--maxw);margin:0 auto;padding:0 26px}
+.divider .ln{width:90px;height:1px;background:var(--line-dim)}
+.divider .dia{color:var(--candle);font-size:9px}
 
-/* sections */
-.section{padding:clamp(64px,9vw,110px) 0}
-.section-head{max-width:620px;margin-bottom:54px}
-.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
-.section-head.center .eyebrow{justify-content:center}
-h2.title{font-family:var(--serif);font-weight:500;font-size:clamp(1.95rem,3.8vw,2.9rem);line-height:1.08;letter-spacing:-.01em;color:var(--white)}
-.section-head p.intro{margin-top:18px;color:var(--mist);font-size:clamp(1rem,1.3vw,1.1rem);line-height:1.65}
+/* method — procession */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line-dim);border-bottom:1px solid var(--line-dim)}
+.step{position:relative;padding:46px 36px 50px;text-align:center;transition:background .35s ease}
+.step+.step{border-left:1px solid var(--line-dim)}
+.step:hover{background:rgba(216,179,106,.04)}
+.step .num{font-family:var(--display);font-size:44px;color:var(--candle);line-height:1;margin-bottom:22px}
+.step h3{font-family:var(--display);font-weight:400;font-size:18px;letter-spacing:.12em;text-transform:uppercase;color:var(--ivory);margin-bottom:14px}
+.step p{color:var(--fog);font-size:14.5px;line-height:1.7;max-width:300px;margin:0 auto}
 
-/* divider */
-.facet-div{display:flex;align-items:center;gap:18px;max-width:var(--maxw);margin:0 auto;padding:0 24px}
-.facet-div .ln{flex:1;height:1px;background:var(--line)}
-.facet-div .gem{width:16px;height:16px}
-.facet-div .gem path{stroke:var(--gold);stroke-opacity:.7}
-
-/* how it works */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;counter-reset:step}
-.step{position:relative;padding:30px 26px;background:var(--surface);border:1px solid var(--line-cool);border-radius:var(--r);transition:transform .25s ease,border-color .25s ease}
-.step:hover{transform:translateY(-3px);border-color:var(--line)}
-.step-mark{position:relative;width:54px;height:54px;display:flex;align-items:center;justify-content:center;margin-bottom:22px}
-.step-mark .gem{position:absolute;inset:0;width:54px;height:54px}
-.step-mark .gem path{stroke:var(--gold);stroke-width:1.4;stroke-opacity:.75}
-.step-mark .n{font-family:var(--serif);font-weight:500;font-size:19px;color:var(--gold-soft);position:relative;top:-2px}
-.step h3{font-size:18px;font-weight:600;color:var(--white);margin-bottom:10px}
-.step p{color:var(--mist);font-size:14.5px;line-height:1.62}
-
-/* security */
-.sec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.feat{padding:28px 26px;background:linear-gradient(180deg,rgba(201,168,108,.03),transparent),var(--surface);border:1px solid var(--line-cool);border-radius:var(--r);transition:transform .25s ease,border-color .25s ease}
-.feat:hover{transform:translateY(-3px);border-color:var(--line)}
-.feat-ic{width:46px;height:46px;border-radius:12px;background:rgba(201,168,108,.09);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
-.feat-ic svg{width:22px;height:22px;stroke:var(--gold);fill:none}
-.feat-ic.guard{background:rgba(95,199,154,.09);border-color:rgba(95,199,154,.25)}
+/* vault */
+.vault{position:relative;background:var(--velvet-deep);border-top:1px solid var(--line-dim);border-bottom:1px solid var(--line-dim)}
+.vault::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 60% at 50% 0%,rgba(216,179,106,.06),transparent 60%);pointer-events:none}
+.sec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:46px 54px}
+.feat{text-align:left}
+.feat-ic{width:50px;height:50px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:22px;transition:box-shadow .35s ease,border-color .35s ease}
+.feat:hover .feat-ic{border-color:var(--candle);box-shadow:0 0 30px -6px rgba(216,179,106,.4)}
+.feat-ic svg{width:21px;height:21px;stroke:var(--candle);fill:none}
 .feat-ic.guard svg{stroke:var(--guard)}
-.feat h3{font-size:17px;font-weight:600;color:var(--white);margin-bottom:9px}
-.feat p{color:var(--mist);font-size:14px;line-height:1.6}
+.feat h3{font-family:var(--display);font-weight:400;font-size:16px;letter-spacing:.12em;text-transform:uppercase;color:var(--ivory);margin-bottom:10px}
+.feat p{color:var(--fog);font-size:14px;line-height:1.7}
 
-/* coins */
-.coins{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.coin{display:flex;align-items:center;gap:14px;padding:18px 20px;background:var(--surface);border:1px solid var(--line-cool);border-radius:var(--r);transition:transform .22s ease,border-color .22s ease}
-.coin:hover{transform:translateY(-2px);border-color:var(--gold)}
-.coin-badge{width:38px;height:38px;flex:none;border-radius:50%;background:var(--surface-2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:var(--gold-soft);letter-spacing:-.02em}
-.coin-name{font-size:14.5px;font-weight:500;color:var(--platinum);line-height:1.2}
-.coin-tic{font-size:12px;color:var(--mist)}
-.coin.more{justify-content:center;color:var(--gold-soft);font-weight:500;font-size:14px}
+/* collection — vitrines */
+.coins{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.coin{position:relative;text-align:center;padding:36px 18px 26px;background:linear-gradient(180deg,rgba(216,179,106,.05),transparent 55%),var(--case);border:1px solid var(--line-dim);overflow:hidden;transition:transform .3s ease,border-color .3s ease,box-shadow .35s ease}
+.coin::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:70%;height:60px;background:radial-gradient(50% 100% at 50% 0%,rgba(216,179,106,.16),transparent 75%);opacity:.5;transition:opacity .35s ease;pointer-events:none}
+.coin:hover{transform:translateY(-4px);border-color:var(--line);box-shadow:0 24px 50px -28px rgba(0,0,0,.9)}
+.coin:hover::before{opacity:1}
+.coin-badge{width:54px;height:54px;margin:0 auto 16px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:13px;letter-spacing:.06em;color:var(--candle)}
+.coin-name{font-family:var(--display);font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--ivory)}
+.coin-tic{margin-top:5px;font-size:10px;letter-spacing:.3em;color:var(--fog)}
+.coin.more{display:flex;align-items:center;justify-content:center;color:var(--candle);font-size:11.5px;font-weight:400;letter-spacing:.26em;text-transform:uppercase;min-height:175px}
 
-/* fees */
-.fees-wrap{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
-.fees-list{display:flex;flex-direction:column;gap:18px;margin-top:10px}
-.fees-list li{list-style:none;display:flex;gap:14px;align-items:flex-start}
-.fees-list .tick{width:24px;height:24px;flex:none;border-radius:50%;background:rgba(95,199,154,.1);border:1px solid rgba(95,199,154,.3);display:flex;align-items:center;justify-content:center;margin-top:1px}
-.fees-list .tick svg{width:13px;height:13px;stroke:var(--guard)}
-.fees-list strong{display:block;color:var(--white);font-weight:600;font-size:15.5px;margin-bottom:2px}
-.fees-list span{color:var(--mist);font-size:14px}
-.fee-card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:34px}
-.fee-card .lab{font-size:12.5px;color:var(--mist);letter-spacing:.04em}
-.fee-card .big{font-family:var(--serif);font-weight:500;font-size:54px;color:var(--white);line-height:1;margin:10px 0 6px}
-.fee-card .big sup{font-size:24px;color:var(--gold-soft);vertical-align:super}
-.fee-card .sub{font-size:13.5px;color:var(--mist)}
-.fee-card hr{border:none;border-top:1px solid var(--line-cool);margin:24px 0}
-.fee-row{display:flex;justify-content:space-between;font-size:14px;padding:7px 0;color:var(--mist)}
-.fee-row b{color:var(--platinum);font-weight:500}
+/* terms — certificate */
+.fees-wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.fees-side .caps{display:block;margin-bottom:20px}
+.fees-list{display:flex;flex-direction:column;gap:22px;margin-top:28px}
+.fees-list li{list-style:none;display:flex;gap:16px;align-items:flex-start}
+.fees-list .tick{width:26px;height:26px;flex:none;border-radius:50%;border:1px solid rgba(105,180,137,.4);display:flex;align-items:center;justify-content:center;margin-top:1px}
+.fees-list .tick svg{width:12px;height:12px;stroke:var(--guard)}
+.fees-list strong{display:block;color:var(--ivory);font-weight:400;font-size:15.5px;letter-spacing:.04em;margin-bottom:3px}
+.fees-list span{color:var(--fog);font-size:14px;line-height:1.6}
+.cert{position:relative;border:1px solid var(--line);outline:1px solid var(--line-dim);outline-offset:5px;background:var(--case);padding:44px 40px;text-align:center;transition:box-shadow .4s ease}
+.cert:hover{box-shadow:0 30px 80px -40px rgba(216,179,106,.3)}
+.cert .lab{font-size:10.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--fog)}
+.cert .big{font-family:var(--display);font-size:84px;color:var(--ivory);line-height:1;margin:18px 0 8px}
+.cert .big sup{font-size:30px;color:var(--candle);vertical-align:38px}
+.cert .sub{font-size:13px;color:var(--fog)}
+.cert hr{border:none;border-top:1px solid var(--line-cool);margin:28px 0 18px}
+.fee-row{display:flex;justify-content:space-between;font-size:13.5px;letter-spacing:.05em;padding:9px 0;color:var(--fog)}
+.fee-row b{color:var(--ivory);font-weight:400}
 
 /* faq */
-.faq{max-width:820px;margin:0 auto}
+.faq{max-width:780px;margin:0 auto}
 .q{border-bottom:1px solid var(--line-cool)}
-.q-btn{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;text-align:left;padding:22px 4px;font-size:17px;font-weight:500;color:var(--platinum);transition:color .2s}
-.q-btn:hover{color:var(--white)}
-.q-btn .chev{width:20px;height:20px;flex:none;stroke:var(--gold);transition:transform .3s ease}
-.q-btn[aria-expanded="true"]{color:var(--gold-soft)}
-.q-btn[aria-expanded="true"] .chev{transform:rotate(180deg)}
-.q-ans{max-height:0;overflow:hidden;transition:max-height .35s ease}
-.q-ans-inner{padding:0 4px 24px;color:var(--mist);font-size:15px;line-height:1.7;max-width:680px}
+.q:first-child{border-top:1px solid var(--line-cool)}
+.q-btn{width:100%;display:flex;justify-content:space-between;align-items:center;gap:24px;text-align:left;padding:26px 4px;font-family:var(--display);font-size:17px;letter-spacing:.05em;color:var(--ivory);transition:color .25s}
+.q-btn:hover{color:var(--candle-soft)}
+.q-btn .plus{position:relative;width:18px;height:18px;flex:none}
+.q-btn .plus::before,.q-btn .plus::after{content:"";position:absolute;background:var(--candle);transition:transform .35s ease}
+.q-btn .plus::before{left:0;top:8px;width:18px;height:1px}
+.q-btn .plus::after{left:8px;top:0;width:1px;height:18px}
+.q-btn[aria-expanded="true"] .plus::after{transform:rotate(90deg)}
+.q-ans{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.q-ans-inner{padding:0 4px 28px;color:var(--fog);font-size:15px;line-height:1.75;max-width:660px}
 
-/* cta band */
-.cta-band{text-align:center;padding:clamp(64px,9vw,104px) 0;border-top:1px solid var(--line);position:relative;overflow:hidden}
-.cta-band .hero-glow{top:auto;bottom:-40%;height:560px}
-.cta-band h2{position:relative;z-index:1;font-family:var(--serif);font-weight:500;font-size:clamp(2rem,4.5vw,3.2rem);line-height:1.06;letter-spacing:-.01em;color:var(--white);max-width:680px;margin:0 auto}
-.cta-band p{position:relative;z-index:1;color:var(--mist);margin:20px auto 34px;max-width:480px;font-size:1.05rem}
-.cta-band .btn{position:relative;z-index:1}
+/* cta */
+.cta-band{position:relative;text-align:center;padding:clamp(80px,10vw,130px) 0;overflow:hidden}
+.cta-band::before{content:"";position:absolute;left:50%;top:-120px;transform:translateX(-50%);width:600px;height:420px;background:radial-gradient(50% 60% at 50% 30%,rgba(216,179,106,.13),transparent 70%);pointer-events:none}
+.cta-band .gem{width:34px;height:34px;margin:0 auto 26px}
+.cta-band .gem path{fill:none;stroke:var(--candle);stroke-linejoin:round}
+.cta-band h2{font-family:var(--display);font-weight:400;font-size:clamp(1.9rem,4vw,3rem);letter-spacing:.07em;text-transform:uppercase;line-height:1.16;color:var(--ivory);max-width:700px;margin:0 auto}
+.cta-band p{color:var(--fog);margin:22px auto 38px;max-width:440px;font-size:1.04rem}
 
 /* footer */
-.footer{background:var(--ink);border-top:1px solid var(--line);padding:64px 0 30px}
-.foot-grid{display:grid;grid-template-columns:1.6fr repeat(4,1fr);gap:40px}
-.foot-brand .brand{margin-bottom:16px}
-.foot-brand .tag{font-family:var(--serif);font-style:italic;color:var(--gold-soft);font-size:16px;margin-bottom:10px}
-.foot-brand p{color:var(--mist);font-size:13.5px;max-width:280px;line-height:1.6}
-.foot-col h4{font-size:12.5px;font-weight:600;color:var(--platinum);letter-spacing:.05em;margin-bottom:16px}
-.foot-col a{display:block;color:var(--mist);font-size:13.5px;padding:6px 0;transition:color .2s}
-.foot-col a:hover{color:var(--gold-soft)}
-.foot-bottom{margin-top:50px;padding-top:26px;border-top:1px solid var(--line-cool)}
-.risk{color:var(--mist);font-size:12px;line-height:1.65;max-width:840px;margin-bottom:18px}
-.foot-meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;color:var(--mist);font-size:12.5px}
+.footer{position:relative;background:var(--velvet-deep);border-top:1px solid var(--line-dim);padding:70px 0 34px}
+.foot-grid{display:grid;grid-template-columns:1.5fr repeat(4,1fr);gap:44px}
+.foot-brand .brand{margin-bottom:18px}
+.foot-brand .tag{font-family:var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--candle);font-size:12px;margin-bottom:12px}
+.foot-brand p{color:var(--fog);font-size:13.5px;max-width:270px;line-height:1.7}
+.foot-col h4{font-size:11px;font-weight:500;color:var(--ivory);letter-spacing:.28em;text-transform:uppercase;margin-bottom:18px}
+.foot-col a{display:block;color:var(--fog);font-size:13.5px;padding:6px 0;transition:color .25s}
+.foot-col a:hover{color:var(--candle-soft)}
+.foot-bottom{margin-top:54px;padding-top:28px;border-top:1px solid var(--line-cool)}
+.risk{color:var(--fog);font-size:12px;line-height:1.7;max-width:840px;margin-bottom:20px}
+.foot-meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;color:var(--fog);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+
+/* funding line */
+.rails{border-top:1px solid var(--line-dim);border-bottom:1px solid var(--line-dim);padding:24px 0;text-align:center}
+.rails .caps{color:var(--fog)}
+.rails .caps b{font-weight:400;color:var(--ivory)}
 
 /* modal */
 .modal[hidden]{display:none}
 .modal{position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;padding:24px}
-.modal-backdrop{position:absolute;inset:0;background:rgba(4,7,14,.7);backdrop-filter:blur(4px);opacity:0;transition:opacity .25s ease}
+.modal-backdrop{position:absolute;inset:0;background:rgba(5,10,8,.78);backdrop-filter:blur(5px);opacity:0;transition:opacity .3s ease}
 .modal.open .modal-backdrop{opacity:1}
-.modal-card{position:relative;z-index:1;width:100%;max-width:420px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:36px 32px 30px;text-align:center;transform:translateY(14px) scale(.98);opacity:0;transition:transform .28s ease,opacity .28s ease;box-shadow:0 40px 100px -40px rgba(0,0,0,.9)}
+.modal-card{position:relative;z-index:1;width:100%;max-width:430px;background:var(--case);border:1px solid var(--line);outline:1px solid var(--line-dim);outline-offset:5px;padding:42px 36px 32px;text-align:center;transform:translateY(16px);opacity:0;transition:transform .32s ease,opacity .32s ease;box-shadow:0 50px 120px -40px rgba(0,0,0,.95)}
 .modal.open .modal-card{transform:none;opacity:1}
-.modal-x{position:absolute;top:16px;right:16px;width:34px;height:34px;border-radius:9px;color:var(--mist);font-size:20px;display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s}
-.modal-x:hover{background:var(--surface-2);color:var(--platinum)}
-.modal-card .gem{width:42px;height:42px;margin:0 auto 18px}
-.modal-card .gem path{stroke:var(--gold);stroke-width:2}
-.modal-card h3{font-family:var(--serif);font-weight:500;font-size:23px;color:var(--white);margin-bottom:8px}
-.modal-card>p{color:var(--mist);font-size:14.5px;margin-bottom:22px;line-height:1.55}
-.modal-input{width:100%;background:var(--surface-2);border:1px solid var(--line-cool);border-radius:11px;padding:13px 15px;color:var(--white);font-size:15px;margin-bottom:12px}
-.modal-input::placeholder{color:#5f6b80}
-.modal-input:focus{outline:none;border-color:rgba(201,168,108,.45)}
-.modal-submit{width:100%;margin-bottom:14px}
-.modal-fine{font-size:11.5px;color:var(--mist);line-height:1.5}
-.modal-err{color:#E2766B;font-size:13px;margin:-4px 0 12px;text-align:left}
+.modal-x{position:absolute;top:14px;right:14px;width:36px;height:36px;color:var(--fog);font-size:20px;display:flex;align-items:center;justify-content:center;transition:color .2s}
+.modal-x:hover{color:var(--ivory)}
+.modal-card .gem{width:38px;height:38px;margin:0 auto 20px}
+.modal-card .gem path{fill:none;stroke:var(--candle);stroke-width:2;stroke-linejoin:round}
+.modal-card h3{font-family:var(--display);font-weight:400;font-size:20px;letter-spacing:.1em;text-transform:uppercase;color:var(--ivory);margin-bottom:10px}
+.modal-card>div>p{color:var(--fog);font-size:14px;margin-bottom:26px;line-height:1.6}
+.modal-input{width:100%;background:none;border:none;border-bottom:1px solid var(--line);padding:12px 2px;color:var(--ivory);font-size:16px;font-weight:300;letter-spacing:.03em;text-align:center;margin-bottom:18px;transition:border-color .25s}
+.modal-input::placeholder{color:#5d6a60}
+.modal-input:focus{outline:none;border-bottom-color:var(--candle)}
+.modal-err{color:var(--garnet);font-size:13px;margin:-6px 0 14px}
+.modal-submit{width:100%;margin-bottom:16px}
+.modal-fine{font-size:11px;color:var(--fog);line-height:1.6}
 .modal-done .gem path{stroke:var(--guard)}
-.modal-done p{color:var(--mist);font-size:14.5px;margin-bottom:20px;line-height:1.6}
+.modal-done p{color:var(--fog);font-size:14px;margin-bottom:24px;line-height:1.65}
 
 /* reveal */
-.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1)}
+.js .reveal{opacity:0;transform:translateY(26px);transition:opacity .85s cubic-bezier(.22,1,.36,1),transform .85s cubic-bezier(.22,1,.36,1)}
 .js .reveal.in{opacity:1;transform:none}
-
-/* entrance animations */
-@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
-@keyframes floatGem{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-22px) rotate(2.5deg)}}
-@keyframes pulseGlow{0%,100%{opacity:.7;transform:translateX(-50%) scale(1)}50%{opacity:1;transform:translateX(-50%) scale(1.06)}}
-.js .hero-copy>*{opacity:0;animation:rise .85s cubic-bezier(.22,1,.36,1) forwards}
-.js .hero-copy .eyebrow{animation-delay:.05s}
-.js .hero-copy h1{animation-delay:.14s}
-.js .hero-copy .lead{animation-delay:.26s}
-.js .hero-copy .hero-actions{animation-delay:.38s}
-.js .hero-copy .hero-trust{animation-delay:.5s}
-.js .widget{opacity:0;animation:rise .9s .32s cubic-bezier(.22,1,.36,1) forwards}
-.hero-gem{animation:floatGem 14s ease-in-out infinite}
-.hero-glow{animation:pulseGlow 9s ease-in-out infinite}
-
-/* button sheen */
-.btn-gold{position:relative;overflow:hidden}
-.btn-gold::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);transition:left .6s ease;pointer-events:none}
-.btn-gold:hover::after{left:130%}
-
-/* card glows */
-.step:hover,.feat:hover{box-shadow:0 18px 50px -24px rgba(201,168,108,.28)}
-.coin:hover{box-shadow:0 14px 36px -20px rgba(201,168,108,.35)}
-.fee-card{transition:transform .3s ease,box-shadow .3s ease}
-.fee-card:hover{transform:translateY(-3px);box-shadow:0 24px 60px -28px rgba(201,168,108,.3)}
 
 /* responsive */
 @media (max-width:980px){
-  .hero-grid{grid-template-columns:1fr;gap:44px}
-  .hero{padding:130px 0 60px}
-  .widget{max-width:440px;margin:0 auto}
-  .steps,.sec-grid{grid-template-columns:1fr 1fr}
+  .hero-grid{grid-template-columns:1fr;gap:54px}
+  .hero{padding:150px 0 70px}
+  .stage{max-width:460px;margin:0 auto;width:100%}
+  .beam{top:-72px;height:440px;opacity:.85}
+  .mote{display:none}
+  .steps{grid-template-columns:1fr}
+  .step+.step{border-left:none;border-top:1px solid var(--line-dim)}
+  .sec-grid{grid-template-columns:1fr 1fr;gap:40px}
   .coins{grid-template-columns:repeat(3,1fr)}
-  .fees-wrap{grid-template-columns:1fr;gap:36px}
-  .foot-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .fees-wrap{grid-template-columns:1fr;gap:48px}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:34px}
   .foot-brand{grid-column:1/-1}
 }
 @media (max-width:760px){
   .nav-links,.nav-cta{display:none}
   .menu-btn{display:flex}
-  .steps,.sec-grid,.coins{grid-template-columns:1fr}
-  .sec-grid{gap:16px}
-  .hero-trust{gap:8px 16px}
+  .sec-grid{grid-template-columns:1fr}
+  .coins{grid-template-columns:1fr 1fr}
   .foot-grid{grid-template-columns:1fr 1fr}
-  .fee-card{padding:28px}
+  .cert{padding:36px 26px}
+  .beam{width:330px;top:-150px}
 }
 @media (max-width:430px){
-  .wrap{padding:0 18px}
-  .coins{grid-template-columns:1fr 1fr}
+  .wrap{padding:0 20px}
+  .coins{grid-template-columns:1fr 1fr;gap:12px}
   .foot-grid{grid-template-columns:1fr}
+  .brand .wm{font-size:18px}
+  .hero h1{letter-spacing:.03em}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *{transition:none!important;animation:none!important}
   .js .reveal{opacity:1!important;transform:none!important}
-  .js .hero-copy>*,.js .widget{opacity:1!important}
+  .js .hero-copy>*,.js .case,.js .beam,.js .plaque{opacity:1!important}
+  .mote{display:none}
 }
 </style>
 </head>
@@ -314,118 +310,111 @@ h2.title{font-family:var(--serif);font-weight:500;font-size:clamp(1.95rem,3.8vw,
 <header class="site" id="site">
   <div class="wrap nav">
     <a class="brand" href="#" aria-label="Trove home">
-      <svg class="gem" viewBox="0 0 48 48" aria-hidden="true"><path d="M16 8H32L44 19L24 44L4 19Z" stroke-width="2.2"/><path d="M4 19H44" stroke-width="1.3" stroke-opacity=".55"/><path d="M16 8L24 44M32 8L24 44" stroke-width="1.3" stroke-opacity=".55"/></svg>
+      <svg class="gem" viewBox="0 0 48 48" aria-hidden="true"><path d="M16 8H32L44 19L24 44L4 19Z" stroke-width="2.4"/><path d="M4 19H44" stroke-width="1.2" stroke-opacity=".5"/><path d="M16 8L24 44M32 8L24 44" stroke-width="1.2" stroke-opacity=".5"/></svg>
       <span class="wm">Trove</span>
     </a>
     <nav class="nav-links" aria-label="Primary">
-      <a class="nav-link" href="#how">How it works</a>
-      <a class="nav-link" href="#security">Security</a>
-      <a class="nav-link" href="#coins">Coins</a>
-      <a class="nav-link" href="#fees">Fees</a>
-      <a class="nav-link" href="#faq">FAQ</a>
+      <a class="nav-link" href="#how">Method</a>
+      <a class="nav-link" href="#security">Vault</a>
+      <a class="nav-link" href="#coins">Collection</a>
+      <a class="nav-link" href="#fees">Terms</a>
+      <a class="nav-link" href="#faq">Questions</a>
     </nav>
     <div class="nav-cta">
       <a class="nav-login" href="#" data-open-modal>Log in</a>
-      <button class="btn btn-gold" data-open-modal>Get started</button>
+      <button class="btn btn-fill" data-open-modal>Create account</button>
     </div>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#how">How it works</a>
-    <a href="#security">Security</a>
-    <a href="#coins">Coins</a>
-    <a href="#fees">Fees</a>
-    <a href="#faq">FAQ</a>
-    <button class="btn btn-gold" data-open-modal>Get started</button>
+    <a href="#how">Method</a>
+    <a href="#security">Vault</a>
+    <a href="#coins">Collection</a>
+    <a href="#fees">Terms</a>
+    <a href="#faq">Questions</a>
+    <button class="btn btn-fill" data-open-modal>Create account</button>
   </div>
 </header>
 
 <main id="main">
 
   <section class="hero">
-    <div class="hero-glow" aria-hidden="true"></div>
-    <svg class="hero-gem" viewBox="0 0 48 48" aria-hidden="true"><path d="M16 8H32L44 19L24 44L4 19Z"/><path d="M4 19H44"/><path d="M16 8L24 44M32 8L24 44"/><path d="M24 8V44M10 19L24 8L38 19"/></svg>
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <span class="eyebrow"><svg class="gem" viewBox="0 0 48 48" aria-hidden="true"><path d="M16 8H32L44 19L24 44L4 19Z" stroke-width="3"/></svg>Security-first crypto, built for first-timers</span>
-        <h1>Own crypto.<br><span class="soft">Sleep easy.</span></h1>
-        <p class="lead">Buy, sell, and hold crypto with bank-grade security built in from the first tap. No jargon, no panic, no nasty surprises — just a calm, beautiful place to own what's yours.</p>
+        <span class="caps">Security-first crypto<span class="dia">&#9670;</span>For first-timers</span>
+        <h1>Own crypto.<span class="gild">Sleep easy.</span></h1>
+        <p class="lead">Buy, sell, and hold crypto with bank-grade security built in from the first tap. No jargon, no panic, no nasty surprises — a calm, beautiful place to own what's yours.</p>
         <div class="hero-actions">
-          <button class="btn btn-gold btn-lg" data-open-modal>Get started</button>
-          <a class="btn btn-ghost btn-lg" href="#how">See how it works</a>
+          <button class="btn btn-fill" data-open-modal>Create account</button>
+          <a class="btn btn-line" href="#how">See how it works</a>
         </div>
-        <div class="hero-trust">
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="9.5" rx="2.5"/><path d="M8 10.5V7.6a4 4 0 0 1 8 0v2.9"/></svg>256-bit encryption</span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3.3"/><path d="M10.3 10.3 19 19M15.5 15.5l2-2"/></svg>2-factor by default</span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="var(--guard)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 2.6v4.9c0 4.8-3.4 7.6-7 9-3.6-1.4-7-4.2-7-9V5.6z"/><path d="M9 11.8l2.1 2.1L15.2 9.8"/></svg>Funds you control</span>
-        </div>
+        <p class="hero-trust">256-bit encryption<span class="dia">&#9670;</span>2FA on by default<span class="dia">&#9670;</span>Withdraw anytime</p>
       </div>
 
-      <div class="widget" id="buy" aria-label="Buy crypto calculator">
-        <div class="w-tabs" role="tablist" aria-label="Buy or sell">
-          <button class="w-tab is-active" data-mode="buy" role="tab" aria-selected="true">Buy</button>
-          <button class="w-tab" data-mode="sell" role="tab" aria-selected="false">Sell</button>
-        </div>
-        <div class="w-field">
-          <div class="w-field-top"><label class="w-k" id="payLabel" for="payAmount">You pay</label><span class="w-bal">Instant quote</span></div>
-          <div class="w-field-row">
-            <input class="w-input" id="payAmount" inputmode="decimal" value="500" aria-label="Amount you pay">
-            <div id="payAsset"></div>
+      <div class="stage">
+        <div class="beam" aria-hidden="true"></div>
+        <span class="mote" style="left:42%;top:-60px;animation-delay:0s" aria-hidden="true"></span>
+        <span class="mote" style="left:52%;top:-90px;animation-delay:2.4s" aria-hidden="true"></span>
+        <span class="mote" style="left:47%;top:-40px;animation-delay:4.8s" aria-hidden="true"></span>
+        <span class="mote" style="left:57%;top:-70px;animation-delay:7.2s" aria-hidden="true"></span>
+        <span class="mote" style="left:38%;top:-30px;animation-delay:9.1s" aria-hidden="true"></span>
+        <div class="case" id="buy" aria-label="Buy crypto calculator">
+          <div class="w-tabs" role="tablist" aria-label="Buy or sell">
+            <button class="w-tab is-active" data-mode="buy" role="tab" aria-selected="true">Buy</button>
+            <button class="w-tab" data-mode="sell" role="tab" aria-selected="false">Sell</button>
           </div>
-        </div>
-        <div class="w-swap"><button class="w-swapbtn" id="swapBtn" aria-label="Switch buy and sell"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v16M3 8l4-4 4 4M17 20V4M13 16l4 4 4-4"/></svg></button></div>
-        <div class="w-field">
-          <div class="w-field-top"><span class="w-k" id="getLabel">You receive</span><span class="w-bal" id="rateInline"></span></div>
-          <div class="w-field-row">
-            <output class="w-input w-output" id="getAmount">0</output>
-            <div id="getAsset"></div>
+          <div class="w-field">
+            <div class="w-field-top"><label class="w-k" id="payLabel" for="payAmount">You pay</label><span class="w-bal">Instant quote</span></div>
+            <div class="w-field-row">
+              <input class="w-input" id="payAmount" inputmode="decimal" value="500" aria-label="Amount you pay">
+              <div id="payAsset"></div>
+            </div>
           </div>
+          <div class="w-swap"><button class="w-swapbtn" id="swapBtn" aria-label="Switch buy and sell"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v16M3 8l4-4 4 4M17 20V4M13 16l4 4 4-4"/></svg></button></div>
+          <div class="w-field">
+            <div class="w-field-top"><span class="w-k" id="getLabel">You receive</span><span class="w-bal" id="rateInline"></span></div>
+            <div class="w-field-row">
+              <output class="w-input w-output" id="getAmount">0</output>
+              <div id="getAsset"></div>
+            </div>
+          </div>
+          <p class="w-meta">Rate locked for 60 seconds &middot; indicative pricing</p>
+          <button class="btn btn-fill w-cta" data-open-modal><span id="ctaLabel">Buy securely</span></button>
         </div>
-        <p class="w-meta">Rate locked for 60s · indicative pricing</p>
-        <button class="btn btn-gold w-cta" data-open-modal><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold-deep)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="9.5" rx="2.5"/><path d="M8 10.5V7.6a4 4 0 0 1 8 0v2.9"/></svg><span id="ctaLabel">Buy securely</span></button>
-        <div class="w-trust">
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="var(--guard)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 2.6v4.9c0 4.8-3.4 7.6-7 9-3.6-1.4-7-4.2-7-9V5.6z"/><path d="M9 11.8l2.1 2.1L15.2 9.8"/></svg>Funds you control</span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="9.5" rx="2.5"/><path d="M8 10.5V7.6a4 4 0 0 1 8 0v2.9"/></svg>256-bit</span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3.3"/><path d="M10.3 10.3 19 19M15.5 15.5l2-2"/></svg>2FA</span>
-        </div>
+        <div class="pool" aria-hidden="true"></div>
+        <p class="plaque">Your first purchase &middot; protected from the first tap</p>
       </div>
     </div>
   </section>
 
   <section class="rails">
-    <div class="wrap rails-inner">
-      <span class="rails-label">Fund your account your way</span>
-      <span class="rail-pill">SEPA transfer</span>
-      <span class="rail-pill">Visa</span>
-      <span class="rail-pill">Mastercard</span>
-      <span class="rail-pill">Apple Pay</span>
-      <span class="rail-pill">Google Pay</span>
-      <span class="rail-pill">Bank transfer</span>
+    <div class="wrap">
+      <p class="caps">Fund by <b>SEPA</b><span class="dia">&#9670;</span><b>Visa</b><span class="dia">&#9670;</span><b>Mastercard</b><span class="dia">&#9670;</span><b>Apple&nbsp;Pay</b><span class="dia">&#9670;</span><b>Google&nbsp;Pay</b></p>
     </div>
   </section>
 
   <section class="section" id="how">
     <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow"><svg class="gem" viewBox="0 0 48 48" aria-hidden="true"><path d="M16 8H32L44 19L24 44L4 19Z" stroke-width="3"/></svg>How it works</span>
-        <h2 class="title">Three calm steps to your first coin.</h2>
+      <div class="sec-head reveal">
+        <span class="caps">The method</span>
+        <h2 class="title">Three calm steps to your first coin</h2>
         <p class="intro">No spreadsheets, no seed-phrase panic on day one. Just a clear path from euros to crypto.</p>
       </div>
       <div class="steps">
         <article class="step reveal">
-          <div class="step-mark"><svg class="gem" viewBox="0 0 48 48" aria-hidden="true"><path d="M16 8H32L44 19L24 44L4 19Z"/></svg><span class="n">1</span></div>
+          <div class="num">I</div>
           <h3>Create your account</h3>
           <p>Sign up in minutes and verify your identity once. We keep it quick, and your data stays encrypted the whole way.</p>
         </article>
         <article class="step reveal">
-          <div class="step-mark"><svg class="gem" viewBox="0 0 48 48" aria-hidden="true"><path d="M16 8H32L44 19L24 44L4 19Z"/></svg><span class="n">2</span></div>
+          <div class="num">II</div>
           <h3>Add funds</h3>
           <p>Top up by SEPA transfer, debit card, or Apple Pay. Euros in, ready to spend — usually within minutes.</p>
         </article>
         <article class="step reveal">
-          <div class="step-mark"><svg class="gem" viewBox="0 0 48 48" aria-hidden="true"><path d="M16 8H32L44 19L24 44L4 19Z"/></svg><span class="n">3</span></div>
+          <div class="num">III</div>
           <h3>Buy and hold safely</h3>
           <p>Buy any supported coin at a rate locked before you confirm, then store it with security switched on by default.</p>
         </article>
@@ -433,43 +422,41 @@ h2.title{font-family:var(--serif);font-weight:500;font-size:clamp(1.95rem,3.8vw,
     </div>
   </section>
 
-  <div class="facet-div" aria-hidden="true"><span class="ln"></span><svg class="gem" viewBox="0 0 48 48"><path d="M16 8H32L44 19L24 44L4 19Z" stroke-width="2.5"/></svg><span class="ln"></span></div>
-
-  <section class="section" id="security">
+  <section class="section vault" id="security">
     <div class="wrap">
-      <div class="section-head reveal">
-        <span class="eyebrow"><svg class="gem" viewBox="0 0 48 48" aria-hidden="true"><path d="M16 8H32L44 19L24 44L4 19Z" stroke-width="3"/></svg>Why Trove</span>
+      <div class="sec-head reveal">
+        <span class="caps">The vault</span>
         <h2 class="title">Security isn't a feature.<br>It's the foundation.</h2>
         <p class="intro">Most crypto apps treat safety as a setting you have to go hunting for. We made it the default — so the scary part stops being scary.</p>
       </div>
       <div class="sec-grid">
         <article class="feat reveal">
-          <div class="feat-ic"><svg viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="9.5" rx="2.5"/><path d="M8 10.5V7.6a4 4 0 0 1 8 0v2.9"/></svg></div>
+          <div class="feat-ic"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="9.5" rx="2.5"/><path d="M8 10.5V7.6a4 4 0 0 1 8 0v2.9"/></svg></div>
           <h3>Bank-grade encryption</h3>
           <p>Your data and funds are protected with 256-bit encryption — the same standard the banks rely on.</p>
         </article>
         <article class="feat reveal">
-          <div class="feat-ic"><svg viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3.5"/><path d="M11.5 11.5 20 20M16 16l2.5-2.5M13.5 13.5 16 11"/></svg></div>
+          <div class="feat-ic"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3.5"/><path d="M11.5 11.5 20 20M16 16l2.5-2.5M13.5 13.5 16 11"/></svg></div>
           <h3>Two-factor by default</h3>
           <p>Every account is guarded by 2-factor authentication from day one — not buried three menus deep.</p>
         </article>
         <article class="feat reveal">
-          <div class="feat-ic guard"><svg viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 2.6v4.9c0 4.8-3.4 7.6-7 9-3.6-1.4-7-4.2-7-9V5.6z"/><path d="M9 11.8l2.1 2.1L15.2 9.8"/></svg></div>
+          <div class="feat-ic guard"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 2.6v4.9c0 4.8-3.4 7.6-7 9-3.6-1.4-7-4.2-7-9V5.6z"/><path d="M9 11.8l2.1 2.1L15.2 9.8"/></svg></div>
           <h3>Funds you control</h3>
           <p>Withdraw to your own wallet whenever you like. Your keys, your crypto, your call — no lock-in.</p>
         </article>
         <article class="feat reveal">
-          <div class="feat-ic"><svg viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 2.6v4.9c0 4.8-3.4 7.6-7 9-3.6-1.4-7-4.2-7-9V5.6z"/><path d="M12 9v4"/><circle cx="12" cy="15.5" r=".4" fill="currentColor"/></svg></div>
+          <div class="feat-ic"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 2.6v4.9c0 4.8-3.4 7.6-7 9-3.6-1.4-7-4.2-7-9V5.6z"/><path d="M12 9v4"/><circle cx="12" cy="15.5" r=".4" fill="currentColor"/></svg></div>
           <h3>Withdrawal protection</h3>
           <p>New withdrawal addresses pause for review, so a stolen password alone can't drain your account.</p>
         </article>
         <article class="feat reveal">
-          <div class="feat-ic"><svg viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="3" y="13" width="4" height="6" rx="2"/><rect x="17" y="13" width="4" height="6" rx="2"/><path d="M20 19a4 4 0 0 1-4 3h-2"/></svg></div>
+          <div class="feat-ic"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="3" y="13" width="4" height="6" rx="2"/><rect x="17" y="13" width="4" height="6" rx="2"/><path d="M20 19a4 4 0 0 1-4 3h-2"/></svg></div>
           <h3>Real human support</h3>
           <p>Talk to a real person, not a bot, whenever something feels off. Calm, fast help when it matters most.</p>
         </article>
         <article class="feat reveal">
-          <div class="feat-ic"><svg viewBox="0 0 24 24" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7l14 9M19 7L5 16"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <div class="feat-ic"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7l14 9M19 7L5 16"/><circle cx="12" cy="12" r="9"/></svg></div>
           <h3>Honest about risk</h3>
           <p>We say it plainly: crypto can go down as well as up. No hype, no pressure — just the facts, every time.</p>
         </article>
@@ -479,40 +466,42 @@ h2.title{font-family:var(--serif);font-weight:500;font-size:clamp(1.95rem,3.8vw,
 
   <section class="section" id="coins">
     <div class="wrap">
-      <div class="section-head center reveal">
-        <span class="eyebrow"><svg class="gem" viewBox="0 0 48 48" aria-hidden="true"><path d="M16 8H32L44 19L24 44L4 19Z" stroke-width="3"/></svg>Supported assets</span>
-        <h2 class="title">The coins people actually buy.</h2>
+      <div class="sec-head reveal">
+        <span class="caps">The collection</span>
+        <h2 class="title">The coins people actually buy</h2>
         <p class="intro">Start with the names you know. Add the rest as you grow comfortable.</p>
       </div>
       <div class="coins">
-        <div class="coin reveal"><span class="coin-badge">BTC</span><div><div class="coin-name">Bitcoin</div><div class="coin-tic">BTC</div></div></div>
-        <div class="coin reveal"><span class="coin-badge">ETH</span><div><div class="coin-name">Ethereum</div><div class="coin-tic">ETH</div></div></div>
-        <div class="coin reveal"><span class="coin-badge">USDT</span><div><div class="coin-name">Tether</div><div class="coin-tic">USDT</div></div></div>
-        <div class="coin reveal"><span class="coin-badge">USDC</span><div><div class="coin-name">USD Coin</div><div class="coin-tic">USDC</div></div></div>
-        <div class="coin reveal"><span class="coin-badge">SOL</span><div><div class="coin-name">Solana</div><div class="coin-tic">SOL</div></div></div>
-        <div class="coin reveal"><span class="coin-badge">XRP</span><div><div class="coin-name">XRP</div><div class="coin-tic">XRP</div></div></div>
-        <div class="coin reveal"><span class="coin-badge">ADA</span><div><div class="coin-name">Cardano</div><div class="coin-tic">ADA</div></div></div>
-        <div class="coin reveal"><span class="coin-badge">DOGE</span><div><div class="coin-name">Dogecoin</div><div class="coin-tic">DOGE</div></div></div>
-        <div class="coin reveal"><span class="coin-badge">DOT</span><div><div class="coin-name">Polkadot</div><div class="coin-tic">DOT</div></div></div>
-        <div class="coin reveal"><span class="coin-badge">LTC</span><div><div class="coin-name">Litecoin</div><div class="coin-tic">LTC</div></div></div>
-        <div class="coin reveal"><span class="coin-badge">LINK</span><div><div class="coin-name">Chainlink</div><div class="coin-tic">LINK</div></div></div>
-        <div class="coin reveal more">+ 40 more assets</div>
+        <div class="coin reveal"><span class="coin-badge">BTC</span><div class="coin-name">Bitcoin</div><div class="coin-tic">BTC</div></div>
+        <div class="coin reveal"><span class="coin-badge">ETH</span><div class="coin-name">Ethereum</div><div class="coin-tic">ETH</div></div>
+        <div class="coin reveal"><span class="coin-badge">USDT</span><div class="coin-name">Tether</div><div class="coin-tic">USDT</div></div>
+        <div class="coin reveal"><span class="coin-badge">USDC</span><div class="coin-name">USD Coin</div><div class="coin-tic">USDC</div></div>
+        <div class="coin reveal"><span class="coin-badge">SOL</span><div class="coin-name">Solana</div><div class="coin-tic">SOL</div></div>
+        <div class="coin reveal"><span class="coin-badge">XRP</span><div class="coin-name">XRP</div><div class="coin-tic">XRP</div></div>
+        <div class="coin reveal"><span class="coin-badge">ADA</span><div class="coin-name">Cardano</div><div class="coin-tic">ADA</div></div>
+        <div class="coin reveal"><span class="coin-badge">DOGE</span><div class="coin-name">Dogecoin</div><div class="coin-tic">DOGE</div></div>
+        <div class="coin reveal"><span class="coin-badge">DOT</span><div class="coin-name">Polkadot</div><div class="coin-tic">DOT</div></div>
+        <div class="coin reveal"><span class="coin-badge">LTC</span><div class="coin-name">Litecoin</div><div class="coin-tic">LTC</div></div>
+        <div class="coin reveal"><span class="coin-badge">LINK</span><div class="coin-name">Chainlink</div><div class="coin-tic">LINK</div></div>
+        <div class="coin more reveal">+ 40 more assets</div>
       </div>
     </div>
   </section>
 
+  <div class="divider" aria-hidden="true"><span class="ln"></span><span class="dia">&#9670;</span><span class="ln"></span></div>
+
   <section class="section" id="fees">
     <div class="wrap fees-wrap">
-      <div class="reveal">
-        <span class="eyebrow"><svg class="gem" viewBox="0 0 48 48" aria-hidden="true"><path d="M16 8H32L44 19L24 44L4 19Z" stroke-width="3"/></svg>Fees</span>
-        <h2 class="title">One clear fee. Nothing hidden.</h2>
+      <div class="fees-side reveal">
+        <span class="caps">The terms</span>
+        <h2 class="title">One clear fee.<br>Nothing hidden.</h2>
         <ul class="fees-list">
           <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 7"/></svg></span><div><strong>Shown before you confirm</strong><span>You always see the full cost up front — never after you've committed.</span></div></li>
           <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 7"/></svg></span><div><strong>No spread games</strong><span>A single transparent fee — no hidden markup buried in the exchange rate.</span></div></li>
           <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 7"/></svg></span><div><strong>No surprise charges</strong><span>Free SEPA deposits and no withdrawal traps. What you see is what you pay.</span></div></li>
         </ul>
       </div>
-      <div class="fee-card reveal">
+      <div class="cert reveal">
         <div class="lab">Trading fee, from</div>
         <div class="big">0.5<sup>%</sup></div>
         <div class="sub">Lower as you trade more. Always shown before you confirm.</div>
@@ -527,33 +516,33 @@ h2.title{font-family:var(--serif);font-weight:500;font-size:clamp(1.95rem,3.8vw,
 
   <section class="section" id="faq">
     <div class="wrap">
-      <div class="section-head center reveal">
-        <span class="eyebrow"><svg class="gem" viewBox="0 0 48 48" aria-hidden="true"><path d="M16 8H32L44 19L24 44L4 19Z" stroke-width="3"/></svg>Questions</span>
-        <h2 class="title">The things people ask first.</h2>
+      <div class="sec-head reveal">
+        <span class="caps">Questions</span>
+        <h2 class="title">The things people ask first</h2>
       </div>
       <div class="faq reveal">
         <div class="q">
-          <button class="q-btn" aria-expanded="false"><span>Is my money safe with Trove?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <button class="q-btn" aria-expanded="false"><span>Is my money safe with Trove?</span><span class="plus" aria-hidden="true"></span></button>
           <div class="q-ans"><div class="q-ans-inner">Safety is the whole point of Trove. We use 256-bit encryption, turn on 2-factor authentication for every account by default, and pause new withdrawal addresses for review. You can also move your crypto to your own wallet at any time — you're never locked in. Crypto itself still carries market risk, which we're always upfront about.</div></div>
         </div>
         <div class="q">
-          <button class="q-btn" aria-expanded="false"><span>How do I buy my first crypto?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <button class="q-btn" aria-expanded="false"><span>How do I buy my first crypto?</span><span class="plus" aria-hidden="true"></span></button>
           <div class="q-ans"><div class="q-ans-inner">Create your account, verify your identity once, and add funds by SEPA, card, or Apple Pay. Then choose a coin, check the rate that's locked before you confirm, and buy. Most first purchases take just a few minutes from start to finish.</div></div>
         </div>
         <div class="q">
-          <button class="q-btn" aria-expanded="false"><span>What payment methods can I use?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <button class="q-btn" aria-expanded="false"><span>What payment methods can I use?</span><span class="plus" aria-hidden="true"></span></button>
           <div class="q-ans"><div class="q-ans-inner">You can fund your account with a SEPA bank transfer, Visa or Mastercard debit card, Apple Pay, Google Pay, or a standard bank transfer. SEPA deposits are free and usually clear within minutes.</div></div>
         </div>
         <div class="q">
-          <button class="q-btn" aria-expanded="false"><span>Do I actually own my crypto?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <button class="q-btn" aria-expanded="false"><span>Do I actually own my crypto?</span><span class="plus" aria-hidden="true"></span></button>
           <div class="q-ans"><div class="q-ans-inner">Yes. Your crypto is yours, and you can withdraw it to a personal wallet whenever you choose. We never restrict your right to take self-custody of your assets.</div></div>
         </div>
         <div class="q">
-          <button class="q-btn" aria-expanded="false"><span>How much does it cost?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <button class="q-btn" aria-expanded="false"><span>How much does it cost?</span><span class="plus" aria-hidden="true"></span></button>
           <div class="q-ans"><div class="q-ans-inner">A single, transparent trading fee that's always shown before you confirm — no hidden markup in the rate. SEPA deposits and custody are free; card deposits and crypto network fees are shown clearly at checkout.</div></div>
         </div>
         <div class="q">
-          <button class="q-btn" aria-expanded="false"><span>How fast are deposits and withdrawals?</span><svg class="chev" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <button class="q-btn" aria-expanded="false"><span>How fast are deposits and withdrawals?</span><span class="plus" aria-hidden="true"></span></button>
           <div class="q-ans"><div class="q-ans-inner">SEPA and card deposits usually arrive within minutes. Crypto withdrawals are sent as soon as they clear our security review, with the network confirmation time depending on the coin you're moving.</div></div>
         </div>
       </div>
@@ -561,11 +550,11 @@ h2.title{font-family:var(--serif);font-weight:500;font-size:clamp(1.95rem,3.8vw,
   </section>
 
   <section class="cta-band">
-    <div class="hero-glow" aria-hidden="true"></div>
     <div class="wrap">
+      <svg class="gem" viewBox="0 0 48 48" aria-hidden="true"><path d="M16 8H32L44 19L24 44L4 19Z" stroke-width="2.2"/><path d="M4 19H44" stroke-width="1.1" stroke-opacity=".5"/><path d="M16 8L24 44M32 8L24 44" stroke-width="1.1" stroke-opacity=".5"/></svg>
       <h2>Ready to own crypto — calmly?</h2>
       <p>Join the people who decided that owning crypto shouldn't feel like a gamble.</p>
-      <button class="btn btn-gold btn-lg" data-open-modal>Get started</button>
+      <button class="btn btn-fill" data-open-modal>Create account</button>
     </div>
   </section>
 
@@ -576,7 +565,7 @@ h2.title{font-family:var(--serif);font-weight:500;font-size:clamp(1.95rem,3.8vw,
     <div class="foot-grid">
       <div class="foot-brand">
         <a class="brand" href="#" aria-label="Trove home">
-          <svg class="gem" viewBox="0 0 48 48" aria-hidden="true"><path d="M16 8H32L44 19L24 44L4 19Z" stroke-width="2.2"/><path d="M4 19H44" stroke-width="1.3" stroke-opacity=".55"/><path d="M16 8L24 44M32 8L24 44" stroke-width="1.3" stroke-opacity=".55"/></svg>
+          <svg class="gem" viewBox="0 0 48 48" aria-hidden="true"><path d="M16 8H32L44 19L24 44L4 19Z" stroke-width="2.4"/><path d="M4 19H44" stroke-width="1.2" stroke-opacity=".5"/><path d="M16 8L24 44M32 8L24 44" stroke-width="1.2" stroke-opacity=".5"/></svg>
           <span class="wm">Trove</span>
         </a>
         <div class="tag">Own crypto. Sleep easy.</div>
@@ -614,7 +603,7 @@ h2.title{font-family:var(--serif);font-weight:500;font-size:clamp(1.95rem,3.8vw,
     <div class="foot-bottom">
       <p class="risk">Crypto is volatile and your capital is at risk. The value of crypto assets can go down as well as up, and you may get back less than you put in. Nothing on this site is financial advice. Trove is a trading name of [Your Company Ltd]. [Add your registration and regulatory status here before going live.]</p>
       <div class="foot-meta">
-        <span>© 2026 Trove. All rights reserved.</span>
+        <span>&copy; 2026 Trove. All rights reserved.</span>
         <span>Made with care for the cautious.</span>
       </div>
     </div>
@@ -626,20 +615,20 @@ h2.title{font-family:var(--serif);font-weight:500;font-size:clamp(1.95rem,3.8vw,
   <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <button class="modal-x" aria-label="Close" data-close-modal>&times;</button>
     <div id="modalForm">
-      <svg class="gem" viewBox="0 0 48 48" aria-hidden="true"><path d="M16 8H32L44 19L24 44L4 19Z"/><path d="M4 19H44" stroke-opacity=".55"/><path d="M16 8L24 44M32 8L24 44" stroke-opacity=".55"/></svg>
+      <svg class="gem" viewBox="0 0 48 48" aria-hidden="true"><path d="M16 8H32L44 19L24 44L4 19Z"/><path d="M4 19H44" stroke-opacity=".5"/><path d="M16 8L24 44M32 8L24 44" stroke-opacity=".5"/></svg>
       <h3 id="modalTitle">Create your Trove account</h3>
       <p>Start in under two minutes. Two-factor protection is on by default.</p>
       <label class="vh" for="email">Email address</label>
       <input class="modal-input" id="email" type="email" placeholder="you@email.com" autocomplete="email">
       <p class="modal-err" id="modalErr" hidden role="alert"></p>
-      <button class="btn btn-gold modal-submit" id="modalSubmit"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold-deep)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="9.5" rx="2.5"/><path d="M8 10.5V7.6a4 4 0 0 1 8 0v2.9"/></svg>Continue securely</button>
+      <button class="btn btn-fill modal-submit" id="modalSubmit">Continue securely</button>
       <p class="modal-fine">By continuing you agree to our terms. Crypto is volatile; your capital is at risk.</p>
     </div>
     <div class="modal-done" id="modalDone" hidden>
       <svg class="gem" viewBox="0 0 48 48" aria-hidden="true"><path d="M16 8H32L44 19L24 44L4 19Z"/><path d="M16 24l5 5 10-11" stroke-linecap="round"/></svg>
       <h3>You're all set</h3>
       <p>Thanks — we've received your details. Keep an eye on your inbox: we'll send you everything you need to finish setting up your Trove account.</p>
-      <button class="btn btn-ghost" data-close-modal>Done</button>
+      <button class="btn btn-line" data-close-modal>Done</button>
     </div>
   </div>
 </div>
@@ -680,13 +669,13 @@ document.documentElement.classList.add('js');
   function eurBadge(){ return '<div class="w-asset"><span class="w-coin">&euro;</span>EUR</div>'; }
   function coinControl(){
     var opts=coins.map(function(c){ return '<option value="'+c+'"'+(c===state.coin?' selected':'')+'>'+c+'</option>'; }).join('');
-    return '<div class="w-asset w-asset-select"><span class="w-coin">&#9670;</span><select class="w-select" id="coinSelect" aria-label="Choose a coin">'+opts+'</select></div>';
+    return '<div class="w-asset"><span class="w-coin">&#9670;</span><select class="w-select" id="coinSelect" aria-label="Choose a coin">'+opts+'</select></div>';
   }
   function recalc(){
     var amt=parseFloat(payAmount.value)||0, r=rates[state.coin], out;
     if(state.mode==='buy'){ out=amt/r; getAmount.textContent=fmtCrypto(out); }
     else { out=amt*r; getAmount.textContent=eur.format(out); }
-    rateInline.textContent='1 '+state.coin+' \u2248 '+eur.format(r);
+    rateInline.textContent='1 '+state.coin+' ≈ '+eur.format(r);
   }
   function render(){
     if(state.mode==='buy'){
@@ -732,7 +721,7 @@ document.documentElement.classList.add('js');
   }
   function closeModal(){
     modal.classList.remove('open'); document.body.style.overflow='';
-    setTimeout(function(){ modal.hidden=true; if(lastFocus) lastFocus.focus(); },240);
+    setTimeout(function(){ modal.hidden=true; if(lastFocus) lastFocus.focus(); },260);
   }
   document.querySelectorAll('[data-open-modal]').forEach(function(b){ b.addEventListener('click',function(e){ e.preventDefault(); openModal(); }); });
   document.querySelectorAll('[data-close-modal]').forEach(function(b){ b.addEventListener('click',closeModal); });
@@ -765,7 +754,7 @@ document.documentElement.classList.add('js');
     });
   });
 
-  // reveal
+  // staggered reveal
   var reveals=document.querySelectorAll('.reveal');
   reveals.forEach(function(el){
     var sibs=el.parentElement.querySelectorAll(':scope > .reveal');
@@ -778,7 +767,7 @@ document.documentElement.classList.add('js');
     },{threshold:.12, rootMargin:'0px 0px -40px 0px'});
     reveals.forEach(function(el){ io.observe(el); });
   } else { reveals.forEach(function(el){ el.classList.add('in'); }); }
-  window.addEventListener('load',function(){ setTimeout(function(){ reveals.forEach(function(el){ el.classList.add('in'); }); },1200); });
+  window.addEventListener('load',function(){ setTimeout(function(){ reveals.forEach(function(el){ el.classList.add('in'); }); },1400); });
 })();
 </script>
 </body>
