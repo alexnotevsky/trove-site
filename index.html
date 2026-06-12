@@ -242,6 +242,7 @@ h2.title{font-family:var(--serif);font-weight:500;font-size:clamp(1.95rem,3.8vw,
 .modal-input:focus{outline:none;border-color:rgba(201,168,108,.45)}
 .modal-submit{width:100%;margin-bottom:14px}
 .modal-fine{font-size:11.5px;color:var(--mist);line-height:1.5}
+.modal-err{color:#E2766B;font-size:13px;margin:-4px 0 12px;text-align:left}
 .modal-done .gem path{stroke:var(--guard)}
 .modal-done p{color:var(--mist);font-size:14.5px;margin-bottom:20px;line-height:1.6}
 
@@ -630,13 +631,14 @@ h2.title{font-family:var(--serif);font-weight:500;font-size:clamp(1.95rem,3.8vw,
       <p>Start in under two minutes. Two-factor protection is on by default.</p>
       <label class="vh" for="email">Email address</label>
       <input class="modal-input" id="email" type="email" placeholder="you@email.com" autocomplete="email">
+      <p class="modal-err" id="modalErr" hidden role="alert"></p>
       <button class="btn btn-gold modal-submit" id="modalSubmit"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold-deep)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="9.5" rx="2.5"/><path d="M8 10.5V7.6a4 4 0 0 1 8 0v2.9"/></svg>Continue securely</button>
       <p class="modal-fine">By continuing you agree to our terms. Crypto is volatile; your capital is at risk.</p>
     </div>
     <div class="modal-done" id="modalDone" hidden>
       <svg class="gem" viewBox="0 0 48 48" aria-hidden="true"><path d="M16 8H32L44 19L24 44L4 19Z"/><path d="M16 24l5 5 10-11" stroke-linecap="round"/></svg>
       <h3>You're all set</h3>
-      <p>This is the Trove front-end template. Connect your exchange backend, identity checks, and payment provider to finish onboarding and go live.</p>
+      <p>Thanks — we've received your details. Keep an eye on your inbox: we'll send you everything you need to finish setting up your Trove account.</p>
       <button class="btn btn-ghost" data-close-modal>Done</button>
     </div>
   </div>
@@ -734,7 +736,24 @@ document.documentElement.classList.add('js');
   }
   document.querySelectorAll('[data-open-modal]').forEach(function(b){ b.addEventListener('click',function(e){ e.preventDefault(); openModal(); }); });
   document.querySelectorAll('[data-close-modal]').forEach(function(b){ b.addEventListener('click',closeModal); });
-  document.getElementById('modalSubmit').addEventListener('click',function(){ mForm.hidden=true; mDone.hidden=false; });
+  var submitBtn=document.getElementById('modalSubmit');
+  submitBtn.addEventListener('click',function(){
+    var emailInput=document.getElementById('email');
+    var val=(emailInput.value||'').trim();
+    var err=document.getElementById('modalErr');
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)){ err.hidden=false; err.textContent='Please enter a valid email address.'; emailInput.focus(); return; }
+    err.hidden=true;
+    submitBtn.disabled=true;
+    var orig=submitBtn.innerHTML; submitBtn.textContent='Sending…';
+    fetch('https://formsubmit.co/ajax/alex.notevsky@tutamail.com',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({email:val,_subject:'New Trove signup',_template:'table',page:location.href})
+    }).then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function(){ mForm.hidden=true; mDone.hidden=false; emailInput.value=''; })
+    .catch(function(){ err.hidden=false; err.textContent='Something went wrong. Please try again.'; })
+    .finally(function(){ submitBtn.disabled=false; submitBtn.innerHTML=orig; });
+  });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ if(!modal.hidden) closeModal(); if(menuOpen) setMenu(false); } });
 
   // faq
